@@ -1,9 +1,18 @@
 import { Component } from '@angular/core';
 
 const todos = [
-  'learn JS6',
-  'learn Angular4',
-  'write simple app'
+  {
+    title: 'learn JS6',
+    completed: true
+  },
+  {
+    title: 'learn Angular4',
+    completed: false
+  },
+  {
+    title: 'write simple app',
+    completed: false
+  }
 ];
 
 @Component({
@@ -17,4 +26,16 @@ const todos = [
 export class AppComponent {
   title = 'Angular 2Do';
   todos = todos;
+
+  toggle(todo) {
+    todo.completed = !todo.completed;
+  }
+
+  delete(todo) {
+    let index = this.todos.indexOf(todo);
+
+    if(index > -1) {
+      this.todos.splice(index, 1);
+    }
+  }
 }
