@@ -1,7 +1,7 @@
 {
   "name": "angular4-todo",
-  "version": "0.0.0",
-  "license": "MIT",
+  "version": "1.0.0",
+  "description": "simple angular4 todo app",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,7 +10,12 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MaksymI/angular4-todo"
+  },
+  "author": "MaksymI",
+  "license": "ISC",
   "dependencies": {
     "@angular/animations": "^4.2.4",
     "@angular/common": "^4.2.4",
