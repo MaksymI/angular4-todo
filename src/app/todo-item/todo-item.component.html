@@ -1,0 +1,28 @@
+<!-- привязка свойств [class.completed]="todo.completed" -->
+    <!-- если только оди конкретный класс то привязка к классу [class.classname] как ниже -->
+    <div class="todo-item" [class.completed]="todo.completed">
+        <!-- если классов несколько то лучше [ngClass] -->
+      <!-- <div class="todo-item" *ngFor="let todo of todos" [ngClass]="{ 'completed': todo.completed} "> -->
+        
+        <!-- привязка событий event binding (click)="toggle(todo)" -->
+        <button class="checkbox icon" (click)="toggle(todo)">
+          <!-- шаблонные теги или интерполяция - упрощенная форма привязки к текстовому содержанию элемента
+            - т.е привязка к свойству - {{ todo.completed ? 'check_box' : 'check_box_outline_blank' }} -->
+          <i class="material-icons">{{ todo.completed ? 'check_box' : 'check_box_outline_blank' }}</i>
+    
+          <!-- <i *ngIf="!todo.completed" class="material-icons">check_box_outline_blank</i>
+          <i *ngIf="todo.completed" class="material-icons">check_box</i> -->
+    
+          <!-- <i class="material-icons" [innerText]="todo.completed ? 'check_box' : 'check_box_outline_blank'"></i> -->
+          <!-- <i class="material-icons" [textContent]="todo.completed ? 'check_box' : 'check_box_outline_blank'"></i> -->
+        </button>
+    
+        <span class="title">{{ todo.title }}</span>
+    
+        <div class="actions">
+          <button class="delete icon" (click)="delete(todo)">
+            <i class="material-icons">delete</i>
+          </button>
+        </div>
+      
+      </div>
