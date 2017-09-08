@@ -1,3 +1,7 @@
 <div class="todo-list" *ngIf="todos.length">
-  <todo-item *ngFor="let todo of todos"></todo-item>
+  <!--in todo-item.component.ts   this.delete.emit(); -->
+  <!-- <todo-item *ngFor="let todo of todos" [todo]="todo" (delete)="delete(todo)"></todo-item> -->
+
+  <!--in todo-item.component.ts   this.delete.emit(this.todo); -->
+  <todo-item *ngFor="let todo of todos" [todo]="todo" (delete)="delete($event)"></todo-item>
 </div>

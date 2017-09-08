@@ -1,5 +1,5 @@
-<form class="todo-form" (ngSubmit)="create(); todoForm.reset()" #todoForm="ngForm">
+<form class="todo-form" (ngSubmit)="onSubmit(); todoForm.reset()" #todoForm="ngForm">
     <!-- двухсторонняя привязка свойств two-way data binding [(ngModel)]="newTodoTitle" - {{ newTodoTitle }}-->
-  <input type="text" name="title" [(ngModel)]="newTodoTitle" placeholder="what to do?" required>
+  <input type="text" name="title" [(ngModel)]="title" placeholder="what to do?" required>
   <button type="submit" [disabled]="todoForm.form.invalid">Add</button>
 </form>

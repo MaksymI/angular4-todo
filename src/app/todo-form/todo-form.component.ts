@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 
 
@@ -11,12 +11,11 @@ import { Component } from '@angular/core';
 //   styleUrls: ['./todo-form.component.css']
 })
 export class TodoFormComponent {
-    newTodoTitle: string = '';
+    title: string = '';
+    @Output() add = new EventEmitter();
 
-    create() {
-        // let todo: Todo = new Todo(this.newTodoTitle);
-        // this.todos.push(todo);
-        // this.newTodoTitle = '';
+    onSubmit() {
+        this.add.emit(this.title)
       }
 
 }
