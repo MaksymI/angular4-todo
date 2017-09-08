@@ -5,7 +5,7 @@
       <!-- <div class="todo-item" *ngFor="let todo of todos" [ngClass]="{ 'completed': todo.completed} "> -->
         
         <!-- привязка событий event binding (click)="toggle(todo)" -->
-        <button class="checkbox icon" (click)="toggle()">
+        <button class="checkbox icon" (click)="onToggle()">
           <!-- шаблонные теги или интерполяция - упрощенная форма привязки к текстовому содержанию элемента
             - т.е привязка к свойству - {{ todo.completed ? 'check_box' : 'check_box_outline_blank' }} -->
           <i class="material-icons">{{ todo.completed ? 'check_box' : 'check_box_outline_blank' }}</i>

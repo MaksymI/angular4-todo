@@ -3,5 +3,5 @@
   <!-- <todo-item *ngFor="let todo of todos" [todo]="todo" (delete)="delete(todo)"></todo-item> -->
 
   <!--in todo-item.component.ts   this.delete.emit(this.todo); -->
-  <todo-item *ngFor="let todo of todos" [todo]="todo" (delete)="delete($event)"></todo-item>
+  <todo-item *ngFor="let todo of todos" [todo]="todo" (delete)="delete($event)" (toggle)="toggle($event)"></todo-item>
 </div>
